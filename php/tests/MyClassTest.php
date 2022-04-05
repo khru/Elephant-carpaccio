@@ -8,12 +8,14 @@ use PHPUnit\Framework\TestCase;
 class MyClassTest extends TestCase
 {
     /** @test */
-    public function give_me_a_good_name_please(): void
+    public function should_able_to_add_items_and_list_them(): void
     {
-        $xxx = new TheClass();
+        $result = [
+            'Iceberg 🥬',
+            'Tomatoe 🍅',
+        ];
+        $shoppingCart = new ShoppingCart($result);
 
-        $result = $xxx->theMethod();
-
-        self::assertEquals(true, $result);
+        self::assertEquals($result, $shoppingCart->all());
     }
 }
