@@ -25,8 +25,8 @@ class ShoppingCartTest extends TestCase
         $expectedPrice = 2.45;
 
         $result = [
-            'Iceberg 🥬',
-            'Tomatoe 🍅',
+            'Iceberg 🥬' => '1.85',
+            'Tomatoe 🍅' => '0.60',
         ];
         $shoppingCart = new ShoppingCart($result);
 

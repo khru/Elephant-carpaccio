@@ -15,4 +15,9 @@ class ShoppingCart
     {
         return $this->items;
     }
+
+    public function priceWithoutVat(): float
+    {
+        return array_sum($this->items);
+    }
 }
