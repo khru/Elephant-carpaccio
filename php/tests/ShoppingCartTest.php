@@ -5,7 +5,7 @@ namespace KataTests;
 use Kata\ShoppingCart;
 use PHPUnit\Framework\TestCase;
 
-class MyClassTest extends TestCase
+class ShoppingCartTest extends TestCase
 {
     /** @test */
     public function should_able_to_add_items_and_list_them(): void

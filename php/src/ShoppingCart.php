@@ -4,9 +4,10 @@ namespace Kata;
 
 class ShoppingCart
 {
-    private $items;
+    private $items = [];
 
-    public function __construct(array $items) {
+    public function __construct(array $items)
+    {
         $this->items = $items;
     }
 
