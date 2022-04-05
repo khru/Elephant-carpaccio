@@ -2,7 +2,7 @@
 
 namespace KataTests;
 
-use Kata\TheClass;
+use Kata\ShoppingCart;
 use PHPUnit\Framework\TestCase;
 
 class MyClassTest extends TestCase
@@ -17,5 +17,19 @@ class MyClassTest extends TestCase
         $shoppingCart = new ShoppingCart($result);
 
         self::assertEquals($result, $shoppingCart->all());
+    }
+
+    /** @test */
+    public function should_view_total_price_for_all_items(): void
+    {
+        $expectedPrice = 2.45;
+
+        $result = [
+            'Iceberg 🥬',
+            'Tomatoe 🍅',
+        ];
+        $shoppingCart = new ShoppingCart($result);
+
+        self::assertEquals($expectedPrice, $shoppingCart->priceWithoutVat());
     }
 }
