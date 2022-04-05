@@ -32,4 +32,18 @@ class ShoppingCartTest extends TestCase
 
         self::assertEquals($expectedPrice, $shoppingCart->priceWithoutVat());
     }
+
+    /** @test */
+    public function should_view_total_price_for_all_items()
+    {
+        $expectedPrice = 2.96;
+
+        $result = [
+            'Iceberg 🥬' => '1.85',
+            'Tomatoe 🍅' => '0.60',
+        ];
+        $shoppingCart = new ShoppingCart($result);
+
+        self::assertEquals($expectedPrice, $shoppingCart->priceWithVat());
+    }
 }
