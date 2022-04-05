@@ -11,8 +11,8 @@ class ShoppingCartTest extends TestCase
     public function should_able_to_add_items_and_list_them(): void
     {
         $result = [
-            'Iceberg 🥬',
-            'Tomatoe 🍅',
+            'Iceberg 🥬' => '1.85',
+            'Tomatoe 🍅' => '0.60',
         ];
         $shoppingCart = new ShoppingCart($result);
 
