@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 class ShoppingCartTest extends TestCase
 {
     /** @test */
-    public function should_able_to_add_items_and_list_them(): void
+    public function it_can_add_items_and_list_them(): void
     {
         $result = [
             'Iceberg 🥬' => '1.85',
