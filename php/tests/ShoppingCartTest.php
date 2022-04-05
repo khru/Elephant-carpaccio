@@ -20,7 +20,7 @@ class ShoppingCartTest extends TestCase
     }
 
     /** @test */
-    public function should_view_total_price_for_all_items(): void
+    public function it_can_calculate_price_without_vat(): void
     {
         $expectedPrice = 2.45;
 
